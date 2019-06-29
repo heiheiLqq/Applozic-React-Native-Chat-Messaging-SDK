@@ -338,12 +338,13 @@
     [ALApplozicSettings setStatusBarStyle:UIStatusBarStyleLightContent];
     /* BY DEFAULT Black:UIStatusBarStyleDefault IF REQ. White: UIStatusBarStyleLightContent  */
     /* ADD property in info.plist "View controller-based status bar appearance" type: BOOLEAN value: NO */
-    
+  [ALApplozicSettings enableQuickAudioRecording:YES];
+  [ALApplozicSettings enableNewAudioDesign:YES];
     [ALApplozicSettings setColorForNavigation:[UIColor colorWithRed:66.0/255 green:173.0/255 blue:247.0/255 alpha:1]];
     [ALApplozicSettings setColorForNavigationItem:[UIColor whiteColor]];
     [ALApplozicSettings hideRefreshButton:NO];
-    [ALUserDefaultsHandler setNavigationRightButtonHidden:NO];
-    [ALUserDefaultsHandler setBottomTabBarHidden:NO];
+    [ALUserDefaultsHandler setNavigationRightButtonHidden:YES];
+    [ALUserDefaultsHandler setBottomTabBarHidden:YES];
     [ALApplozicSettings setTitleForConversationScreen:@"Chats"];
     [ALApplozicSettings setCustomNavRightButtonMsgVC:NO];                   /*  SET VISIBILITY FOR REFRESH BUTTON (COMES FROM TOP IN MSG VC)   */
     [ALApplozicSettings setTitleForBackButtonMsgVC:@"Back"];                /*  SET BACK BUTTON FOR MSG VC  */
@@ -389,7 +390,7 @@
     
     /**********************************************  GROUP SETTINGS  ************************************************/
     
-    [ALApplozicSettings setGroupOption:YES];
+    [ALApplozicSettings setGroupOption:NO];
     [ALApplozicSettings setGroupInfoDisabled:NO];
     [ALApplozicSettings setGroupInfoEditDisabled:NO];
     
